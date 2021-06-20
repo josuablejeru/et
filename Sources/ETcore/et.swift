@@ -6,7 +6,7 @@ import Vision
 public final class ETcore{
     private let arguments: [String]
 
-    public init(arguments: [String] = CommandLine.arguments) { 
+    public init(arguments: [String] = CommandLine.arguments) {
         self.arguments = arguments
     }
 

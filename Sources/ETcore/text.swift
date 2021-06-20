@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  text.swift
 //  
 //
 //  Created by Josua Blejeru on 20.06.21.
@@ -10,7 +10,7 @@ import Vision
 
 
 @available(macOS 10.13, *)
-func recognizeTextRequestHandler(request: VNRequest, error: Error?){
+func recognizeTextRequestHandler(request: VNRequest, error: Error?) {    
     if #available(macOS 10.15, *) {
         guard let observations =
                 request.results as? [VNRecognizedTextObservation] else {
@@ -21,8 +21,9 @@ func recognizeTextRequestHandler(request: VNRequest, error: Error?){
                 return observation.topCandidates(1).first?.string
             }
             
-            // Process the recognized strings.
-            print(recognizedStrings)
+        // Process the recognized strings.
+        print(recognizedStrings)
+
     } else {
         exit(EXIT_FAILURE)
     }
